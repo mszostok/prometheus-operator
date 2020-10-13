@@ -67,6 +67,12 @@ var (
 )
 
 func main() {
+	version.RegisterParseFlags()
+	if version.ShouldPrintVersion() {
+		version.Print(os.Stdout, "prometheus-config-reloader")
+		os.Exit(0)
+	}
+
 	app := kingpin.New("prometheus-config-reloader", "")
 	cfgFile := app.Flag("config-file", "config file watched by the reloader").
 		String()
