@@ -15,7 +15,7 @@
 package operator
 
 import (
-	"github.com/prometheus-operator/prometheus-operator/pkg/version"
+	"github.com/prometheus-operator/prometheus-operator/pkg/versionutil"
 )
 
 const (
@@ -28,7 +28,7 @@ const (
 )
 
 var (
-	DefaultPrometheusConfigReloaderImage = "quay.io/prometheus-operator/prometheus-config-reloader:v" + version.Version
+	DefaultPrometheusConfigReloaderImage = "quay.io/prometheus-operator/prometheus-config-reloader:v" + versionutil.Version
 
 	PrometheusCompatibilityMatrix = []string{
 		"v1.4.0",

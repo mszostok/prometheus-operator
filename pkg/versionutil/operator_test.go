@@ -12,14 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package version_test
+package versionutil_test
 
 import (
 	"testing"
 
+	"github.com/prometheus/common/version"
 	"github.com/stretchr/testify/assert"
-
-	"github.com/prometheus-operator/prometheus-operator/pkg/version"
 )
 
 func TestOperatorInfo(t *testing.T) {
